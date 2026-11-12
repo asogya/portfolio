@@ -1,0 +1,126 @@
+/* ===== RESET & BASE ===== */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --bg: #0f0f12;
+  --surface: #17171c;
+  --text: #e6e6e6;
+  --muted: #9a9aa5;
+  --accent: #7c5cff;
+  --border: #2a2a32;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; display: block; }
+
+/* ===== NAVBAR ===== */
+.navbar {
+  position: sticky; top: 0; z-index: 100;
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 1rem 2rem;
+  background: rgba(15, 15, 18, 0.85);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+}
+.logo { font-weight: 700; font-size: 1.1rem; }
+.nav-links { display: flex; gap: 1.5rem; list-style: none; }
+.nav-links a { color: var(--muted); transition: color 0.2s; }
+.nav-links a:hover { color: var(--text); }
+
+/* ===== HERO ===== */
+.hero {
+  max-width: 800px; margin: 0 auto;
+  padding: 6rem 2rem 4rem;
+  text-align: center;
+}
+.hero h1 { font-size: 2.6rem; margin-bottom: 0.5rem; }
+.highlight { color: var(--accent); }
+.tagline { color: var(--muted); font-size: 1.1rem; margin-bottom: 1.5rem; }
+.intro { max-width: 600px; margin: 0 auto 2rem; color: var(--muted); }
+
+.hero-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+
+/* ===== BUTTONS ===== */
+.btn {
+  padding: 0.7rem 1.4rem; border-radius: 8px;
+  font-weight: 500; transition: all 0.2s;
+}
+.btn.primary { background: var(--accent); color: white; }
+.btn.primary:hover { background: #6a4dff; }
+.btn.secondary { border: 1px solid var(--border); color: var(--text); }
+.btn.secondary:hover { border-color: var(--accent); }
+
+/* ===== SECTIONS ===== */
+.section { max-width: 1000px; margin: 0 auto; padding: 4rem 2rem; }
+.section h2 { font-size: 1.8rem; margin-bottom: 0.5rem; }
+.section-subtitle { color: var(--muted); margin-bottom: 2rem; }
+.alt-bg { background: var(--surface); border-radius: 16px; }
+
+/* ===== PROJECTS ===== */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+.project-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.2s, border-color 0.2s;
+}
+.project-card:hover { transform: translateY(-4px); border-color: var(--accent); }
+.project-img { width: 100%; height: 180px; object-fit: cover; background: #222; }
+.project-info { padding: 1.2rem; }
+.project-info h3 { margin-bottom: 0.4rem; }
+.project-desc { color: var(--muted); font-size: 0.9rem; margin-bottom: 0.6rem; }
+.project-role { font-size: 0.85rem; color: var(--muted); margin-bottom: 0.8rem; }
+.project-tags { display: flex; gap: 0.4rem; flex-wrap: wrap; margin-bottom: 1rem; }
+.project-tags span {
+  background: rgba(124, 92, 255, 0.15);
+  color: var(--accent);
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+}
+.project-links { display: flex; gap: 1rem; }
+.project-links a { color: var(--accent); font-size: 0.9rem; }
+.project-links a:hover { text-decoration: underline; }
+
+/* ===== SKILLS ===== */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+.skill-group h3 { margin-bottom: 0.8rem; color: var(--accent); }
+.skill-group ul { list-style: none; }
+.skill-group li {
+  padding: 0.4rem 0; color: var(--muted);
+  border-bottom: 1px solid var(--border);
+}
+
+/* ===== CONTACT ===== */
+#contact { text-align: center; }
+.contact-links { display: flex; gap: 1rem; justify-content: center; margin-top: 1.5rem; flex-wrap: wrap; }
+
+/* ===== FOOTER ===== */
+footer {
+  text-align: center; padding: 2rem;
+  color: var(--muted); font-size: 0.85rem;
+  border-top: 1px solid var(--border);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 600px) {
+  .hero h1 { font-size: 1.9rem; }
+  .nav-links { gap: 1rem; font-size: 0.9rem; }
+  .navbar { padding: 1rem; }
+}
