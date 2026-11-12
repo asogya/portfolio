@@ -3,72 +3,164 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Your Name — Portfolio</title>
+  <meta name="description" content="Asogya Wunuji Manasseh — Fullstack Developer building complete digital products with Python, PHP, React and modern web technologies." />
+  <title>Asogya Wunuji Manasseh — Fullstack Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
   <!-- ===== NAVBAR ===== -->
   <nav class="navbar">
-    <a href="#home" class="logo">Your Name</a>
-    <ul class="nav-links">
-      <li><a href="#work">Work</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
+    <div class="nav-container">
+      <a href="#home" class="logo">
+        <span class="logo-mark">AW</span>
+        <span class="logo-text">Manasseh</span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="#work">Work</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact" class="nav-cta">Contact</a></li>
+      </ul>
+    </div>
   </nav>
 
   <!-- ===== HERO ===== -->
   <header id="home" class="hero">
-    <h1>Hi, I'm <span class="highlight">Your Name</span></h1>
-    <p class="tagline">Your one-line title — e.g., "Frontend Developer & UI Designer"</p>
-    <p class="intro">
-      <!-- YOUR 2-3 SENTENCE BIO HERE -->
-    </p>
-    <div class="hero-buttons">
-      <a href="#work" class="btn primary">View My Work</a>
-      <a href="#contact" class="btn secondary">Get in Touch</a>
+    <div class="hero-glow"></div>
+    <div class="hero-content">
+      <!-- PROFILE PHOTO -->
+      <div class="profile-photo">
+        <img src="images/profile.jpg" alt="Asogya Wunuji Manasseh"
+             onerror="this.style.display='none';this.parentElement.classList.add('photo-fallback');this.parentElement.setAttribute('data-label','AW')" />
+      </div>
+
+      <span class="hero-eyebrow">Fullstack Developer · Software Engineer</span>
+      <h1>
+        Hi, I'm <span class="gradient-text">Asogya Wunuji Manasseh</span>
+      </h1>
+      <p class="hero-tagline">
+        I build complete digital products — from database architecture to the interface people actually use.
+      </p>
+      <p class="hero-intro">
+        Python · PHP · React · Django · Laravel — I turn ideas into shipped, working software.
+        Open to product development roles, team collaboration, and hiring conversations.
+      </p>
+      <div class="hero-buttons">
+        <a href="#work" class="btn primary">
+          View My Work
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#contact" class="btn secondary">Get in Touch</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><span class="stat-number">4+</span><span class="stat-label">Projects Shipped</span></div>
+        <div class="stat"><span class="stat-number">6+</span><span class="stat-label">Technologies</span></div>
+        <div class="stat"><span class="stat-number">End-to-End</span><span class="stat-label">Product Build</span></div>
+      </div>
     </div>
   </header>
 
-  <!-- ===== WORK / PROJECTS ===== -->
+  <!-- ===== WORK ===== -->
   <section id="work" class="section">
-    <h2>Selected Work</h2>
-    <p class="section-subtitle">Projects I've designed and built</p>
+    <div class="section-header">
+      <span class="section-index">// 01</span>
+      <h2>Selected Work</h2>
+      <p class="section-subtitle">Real systems built for real users — designed, developed, and deployed.</p>
+    </div>
 
     <div class="projects-grid">
 
-      <!-- PROJECT CARD 1 — duplicate this block for each project -->
+      <!-- PROJECT 1: FUHSO — SLIDER (3 images) -->
       <article class="project-card">
-        <img src="images/project1.png" alt="Project 1 screenshot" class="project-img" />
+        <div class="project-image-wrap slider" data-images="images/fuhso1.png,images/fuhso2.png,images/fuhso3.png">
+          <img class="project-img" alt="FUHSO Smart Exam screenshot" />
+          <span class="project-badge">Education</span>
+          <button class="slider-btn prev" aria-label="Previous image">‹</button>
+          <button class="slider-btn next" aria-label="Next image">›</button>
+          <div class="slider-dots"></div>
+        </div>
         <div class="project-info">
-          <h3>Project Name</h3>
-          <p class="project-desc">One sentence about what it does.</p>
-          <p class="project-role"><strong>Role:</strong> Your role here</p>
+          <h3>FUHSO Smart Exam</h3>
+          <p class="project-desc">A CBT (computer-based testing) platform for student assessment — from question bank to result delivery.</p>
+          <p class="project-role"><strong>Role:</strong> Sole designer & developer</p>
           <div class="project-tags">
-            <span>HTML</span><span>CSS</span><span>JavaScript</span>
+            <span>Django</span><span>PostgreSQL</span><span>React</span>
           </div>
           <div class="project-links">
-            <a href="YOUR_LIVE_URL" target="_blank">Live Demo ↗</a>
-            <a href="YOUR_GITHUB_URL" target="_blank">Code ↗</a>
+            <a href="#" target="_blank" class="project-link">Live Demo <span>↗</span></a>
+            <a href="#" target="_blank" class="project-link">Source Code <span>↗</span></a>
           </div>
         </div>
       </article>
 
-      <!-- PROJECT CARD 2 -->
+      <!-- PROJECT 2: CRCN — single image -->
       <article class="project-card">
-        <img src="images/project2.png" alt="Project 2 screenshot" class="project-img" />
+        <div class="project-image-wrap">
+          <img src="images/crcn.png" alt="CRCN Finance Management screenshot" class="project-img"
+               onerror="this.style.display='none';this.parentElement.classList.add('img-fallback');this.parentElement.setAttribute('data-label','CRCN Finance')" />
+          <span class="project-badge">Finance</span>
+        </div>
         <div class="project-info">
-          <h3>Project Name 2</h3>
-          <p class="project-desc">One sentence about what it does.</p>
-          <p class="project-role"><strong>Role:</strong> Your role here</p>
+          <h3>CRCN Finance Management</h3>
+          <p class="project-desc">A full financial accounting system for church administration — records, reports, and reconciliation.</p>
+          <p class="project-role"><strong>Role:</strong> Sole designer & developer</p>
           <div class="project-tags">
-            <span>Python</span><span>API</span>
+            <span>Python</span><span>MySQL</span><span>HTML</span><span>JS</span><span>CSS</span>
           </div>
           <div class="project-links">
-            <a href="YOUR_LIVE_URL" target="_blank">Live Demo ↗</a>
-            <a href="YOUR_GITHUB_URL" target="_blank">Code ↗</a>
+            <a href="#" target="_blank" class="project-link">Live Demo <span>↗</span></a>
+            <a href="#" target="_blank" class="project-link">Source Code <span>↗</span></a>
+          </div>
+        </div>
+      </article>
+
+      <!-- PROJECT 3: DYF — SLIDER (2 images) -->
+      <article class="project-card">
+        <div class="project-image-wrap slider" data-images="images/dyf1.png,images/dyf2.png">
+          <img class="project-img" alt="DYF web application screenshot" />
+          <span class="project-badge">NGO</span>
+          <button class="slider-btn prev" aria-label="Previous image">‹</button>
+          <button class="slider-btn next" aria-label="Next image">›</button>
+          <div class="slider-dots"></div>
+        </div>
+        <div class="project-info">
+          <h3>DYF Web Application</h3>
+          <p class="project-desc">An NGO website with a fully functional admin services management dashboard for programs and outreach.</p>
+          <p class="project-role"><strong>Role:</strong> Backend developer</p>
+          <div class="project-tags">
+            <span>PHP</span><span>Laravel</span><span>MySQL</span>
+          </div>
+          <div class="project-links">
+            <a href="#" target="_blank" class="project-link">Live Demo <span>↗</span></a>
+            <a href="#" target="_blank" class="project-link">Source Code <span>↗</span></a>
+          </div>
+        </div>
+      </article>
+
+      <!-- PROJECT 4: JPN — single image -->
+      <article class="project-card">
+        <div class="project-image-wrap">
+          <img src="images/jpn.png" alt="Jukun Professional Network screenshot" class="project-img"
+               onerror="this.style.display='none';this.parentElement.classList.add('img-fallback');this.parentElement.setAttribute('data-label','Jukun Professional Network')" />
+          <span class="project-badge">Community</span>
+        </div>
+        <div class="project-info">
+          <h3>Jukun Professional Network</h3>
+          <p class="project-desc">An organizational website connecting professionals — member profiles, news, and events.</p>
+          <p class="project-role"><strong>Role:</strong> Sole developer</p>
+          <div class="project-tags">
+            <span>HTML</span><span>CSS</span><span>JavaScript</span>
+          </div>
+          <div class="project-links">
+            <a href="#" target="_blank" class="project-link">Live Demo <span>↗</span></a>
+            <a href="#" target="_blank" class="project-link">Source Code <span>↗</span></a>
           </div>
         </div>
       </article>
@@ -78,32 +170,42 @@
 
   <!-- ===== SKILLS ===== -->
   <section id="skills" class="section alt-bg">
-    <h2>Skills & Tools</h2>
+    <div class="section-header">
+      <span class="section-index">// 02</span>
+      <h2>Skills & Tools</h2>
+      <p class="section-subtitle">What I build with — from backend architecture to product design.</p>
+    </div>
+
     <div class="skills-grid">
       <div class="skill-group">
-        <h3>Design</h3>
-        <ul>
-          <li>Figma</li>
-          <li>UI/UX Design</li>
-          <!-- ADD MORE -->
-        </ul>
-      </div>
-      <div class="skill-group">
+        <div class="skill-icon">⚙</div>
         <h3>Development</h3>
         <ul>
-          <li>HTML / CSS</li>
-          <li>JavaScript</li>
-          <li>Python</li>
-          <li>Git / GitHub</li>
-          <!-- ADD MORE -->
+          <li>Python / Django</li>
+          <li>PHP / Laravel</li>
+          <li>React</li>
+          <li>HTML, CSS, JavaScript</li>
+          <li>PostgreSQL & MySQL</li>
         </ul>
       </div>
       <div class="skill-group">
-        <h3>AI & Tools</h3>
+        <div class="skill-icon">◈</div>
+        <h3>Product & Design</h3>
         <ul>
-          <li>AI-assisted development</li>
-          <li>Prompt Engineering</li>
-          <!-- ADD MORE -->
+          <li>UI/UX Design</li>
+          <li>Product Design</li>
+          <li>Product Engineering</li>
+          <li>Fullstack Product Build</li>
+        </ul>
+      </div>
+      <div class="skill-group">
+        <div class="skill-icon">⌘</div>
+        <h3>Workflow</h3>
+        <ul>
+          <li>Git / GitHub</li>
+          <li>Backend development</li>
+          <li>Database design</li>
+          <li>Team collaboration</li>
         </ul>
       </div>
     </div>
@@ -111,26 +213,68 @@
 
   <!-- ===== ABOUT ===== -->
   <section id="about" class="section">
-    <h2>About Me</h2>
-    <p>
-      <!-- YOUR EXTENDED BIO: your background, what got you into this, what you're learning, what roles you're open to -->
-    </p>
+    <div class="section-header">
+      <span class="section-index">// 03</span>
+      <h2>About Me</h2>
+    </div>
+    <div class="about-grid">
+      <div class="about-text">
+        <p>
+          I'm a software developer and engineer who builds full products — from backend logic and
+          database design to the frontend interfaces people actually use. I work with Python (Django),
+          PHP (Laravel), React, and core web technologies.
+        </p>
+        <p>
+          I've designed and shipped systems for education, finance, non-profits and professional
+          networks — each one built to solve a specific, real problem. I care about the whole
+          product: how it's structured, how it performs, and how it feels to use.
+        </p>
+        <p>
+          I'm open to product development roles, team collaboration, and hiring conversations
+          where I can connect engineering decisions to real product outcomes.
+        </p>
+      </div>
+      <div class="about-card">
+        <h3>Quick Facts</h3>
+        <ul>
+          <li><span>Focus</span><strong>Fullstack Product Development</strong></li>
+          <li><span>Stack</span><strong>Python · PHP · React</strong></li>
+          <li><span>Open to</span><strong>Roles · Teams · Hiring</strong></li>
+          <li><span>Based in</span><strong>Nigeria</strong></li>
+        </ul>
+      </div>
+    </div>
   </section>
 
   <!-- ===== CONTACT ===== -->
-  <section id="contact" class="section alt-bg">
-    <h2>Get in Touch</h2>
-    <p>Have a project in mind, or want to collaborate? I'd love to hear from you.</p>
+  <section id="contact" class="section alt-bg contact-section">
+    <div class="section-header center">
+      <span class="section-index">// 04</span>
+      <h2>Let's Build Something</h2>
+      <p class="section-subtitle">Have a product to build, a team to join, or a role to fill? I'd love to hear from you.</p>
+    </div>
     <div class="contact-links">
-      <a href="mailto:your.email@example.com" class="btn primary">Email Me</a>
-      <a href="https://github.com/yourusername" target="_blank" class="btn secondary">GitHub</a>
-      <!-- ADD LinkedIn if you have one -->
+      <a href="mailto:asogya@gmail.com" class="btn primary">Email Me</a>
+      <a href="https://github.com/asogya" target="_blank" class="btn secondary">GitHub</a>
+      <a href="https://www.linkedin.com/in/asogya" target="_blank" class="btn secondary">LinkedIn</a>
     </div>
   </section>
 
   <!-- ===== FOOTER ===== -->
   <footer>
-    <p>© 2026 Your Name. Built with HTML, CSS & JavaScript.</p>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="logo-mark">AW</span>
+        <p>Asogya Wunuji Manasseh<br /><span>Fullstack Developer</span></p>
+      </div>
+      <div class="footer-links">
+        <a href="#work">Work</a>
+        <a href="#skills">Skills</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+    <p class="footer-copy">© 2026 Asogya Wunuji Manasseh. Built with HTML, CSS & JavaScript.</p>
   </footer>
 
   <script src="script.js"></script>
